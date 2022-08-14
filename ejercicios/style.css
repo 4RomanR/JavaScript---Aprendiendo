@@ -1,0 +1,27 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2rem;    
+}
+header img{
+    width: 30px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo h1{
+    color: coral;
+}
+.cantidad{
+    position: absolute;
+    top: 1rem;
+    right: 5rem;
+    color: red;
+    font-size: 20px;
+    border-radius: 100px;
+    background-color: aquamarine;
+    padding: 1rem 1.5rem;
+
+}
