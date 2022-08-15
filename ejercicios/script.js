@@ -51,3 +51,74 @@ function resultadu(event) {
     presultado2.innerText = 'El resultado es :' + resultado;
 
 };
+
+// TARJETA DE PRODUCTOS
+/*
+<div class="product-cards">
+    <img class="product-card-img" src="https://cdn.pixabay.com/photo/2013/07/12/14/44/watch-148700_960_720.png" alt="">            
+    <div class="product-details">
+        <div>
+            <p>Bike</p>
+            <p>Price</p>
+        </div>
+        <figure>
+            <img src="https://cdn-icons-png.flaticon.com/512/6132/6132882.png" alt="">
+        </figure>
+    </div>   
+</div>
+*/
+const cardContainer = document.querySelector('.product-cards-container');
+const productList = [];
+productList.push({
+    name: 'Reloj',
+    price:323,
+    img:'https://cdn.pixabay.com/photo/2013/07/12/14/44/watch-148700_960_720.png',
+});
+productList.push({
+    name: 'Reloj',
+    price:344,
+    img:'https://cdn.pixabay.com/photo/2013/07/12/14/44/watch-148700_960_720.png',
+});
+productList.push({
+    name: 'Reloj',
+    price:384,
+    img:'https://cdn.pixabay.com/photo/2013/07/12/14/44/watch-148700_960_720.png',
+});
+
+
+for (product of productList) {
+    const productCard = document.createElement('div');
+    productCard.classList.add('product-cards');
+
+    const imgProduct = document.createElement('img');
+    imgProduct.setAttribute('src', product.img);
+
+    const productInfo = document.createElement('div');
+    productInfoDiv.classList.add('product-details');
+
+    const productInfoDiv = document.createElement('div');
+
+    
+    const productName = document.createElement('p')
+    productName.innerText = product.name;
+    const productPrice = document.createElement('p')
+    productPrice.innerText = product.price;
+    
+    productName.appendChild(productInfo);
+    productPrice.appendChild(productInfo);
+
+
+    const productFigure = document.createElement('figure');
+    const productImgCart = documen.createElement('img')
+    productImgCart.setAttribute('src', 'https://cdn-icons-png.flaticon.com/512/6132/6132882.png');
+
+    productImgCart.appendChild(productFigure);
+    
+    productInfo.appendChild(productInfoDiv);
+    productInfo.appendChild(productFigure);
+
+    productCard.appendChild(productImgCart);
+    productCard.appendChild(productInfo);
+
+    cardContainer.appendChild(productCard);
+};

@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -72,16 +78,27 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-color: black ;
 }
+.cta-content{
+    margin-bottom: 2rem;
+}
+.cta-content img{
+    width: 100%;
+}
+
 .cta-text{
-    top: 20rem;
+    top: 15rem;
     left: 1rem;
-    position: absolute;
-    padding: 1rem;
+    position: absolute;    
 }
 .cta-text p, .cta-text h1{
     color: aliceblue;
+    padding: 0 2rem;
+    width: 50%;
 }
+
 .entradas{
     display: flex;
     flex-direction: column;
@@ -92,8 +109,7 @@ main{
 /* ------------PRODUCTOS------------ */
 .product-cards-container{
     display: grid;
-    grid-template-columns: 12rem 10rem 10rem 10rem;
-    grid-template-rows:  18rem  15rem 15rem 15rem;
+    grid-template-columns: auto 1fr auto auto auto;
 }
 .product-cards{
     box-sizing: border-box;
@@ -101,7 +117,10 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(208, 116, 3, 0.786);
+    background-image: linear-gradient(135deg, #8bc5ecbf 0%, #9599e2b5 100%);
+    box-shadow: 3px 5px 8px;
+    margin: 1rem;
+    padding: 2rem;
 }
 .product-card-img{
     width: 8rem;
@@ -109,6 +128,7 @@ main{
 .product-details{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .product-details p{
     margin: 1rem;
