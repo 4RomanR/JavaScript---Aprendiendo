@@ -7,13 +7,130 @@ header{
 header img{
     width: 30px;
 }
+.menu-left{
+    display: flex;
+    align-items: center;
+}
+.menu-left img{
+
+    width: 50px;
+    height: 50px;
+}
+
 .logo{
     display: flex;
     align-items: center;
+    margin: 0 3rem;
 }
 .logo h1{
     color: coral;
 }
+/* ----------Menu Desplegable--------- */
+.menu-burger-category{
+    position: absolute;
+    top: 5rem;
+    left: 4rem;
+    background-color: rgba(0, 0, 0, 0.645);
+}
+.menu-burger-category ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.menu-burger-category li{
+    color: aliceblue;
+    list-style: none;
+    padding: 0 5rem;
+}
+
+/* ----------Carrito---------- */
+
+.car-menu{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.645);    
+    top: 5rem;
+    right: 3rem;
+}
+.car-menu ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.car-menu li{
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    list-style: none;
+    padding: 0 5rem;
+}
+
+.inactive{
+    display: none;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cta-text{
+    top: 20rem;
+    left: 1rem;
+    position: absolute;
+    padding: 1rem;
+}
+.cta-text p, .cta-text h1{
+    color: aliceblue;
+}
+.entradas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 10rem;
+}
+
+/* ------------PRODUCTOS------------ */
+.product-cards-container{
+    display: grid;
+    grid-template-columns: 12rem 10rem 10rem 10rem;
+    grid-template-rows:  18rem  15rem 15rem 15rem;
+}
+.product-cards{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(208, 116, 3, 0.786);
+}
+.product-card-img{
+    width: 8rem;
+}
+.product-details{
+    display: flex;
+    justify-content: space-around;
+}
+.product-details p{
+    margin: 1rem;
+}
+.product-details img{
+    width: 3rem;
+}
+
+input, button{
+    margin: 0.3rem auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 10rem;
+}
+@media (max-width:650px){
+
+}
+
 .cantidad{
     position: absolute;
     top: 1rem;

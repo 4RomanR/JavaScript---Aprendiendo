@@ -6,6 +6,30 @@ const input2 = document.querySelector('#calculo2');
 const btn = document.querySelector('#btncalculo');
 const presultado = document.querySelector ('#resultado1');
 
+
+// MENU DEL CARRITO FIJO
+const carProductsFixed = document.querySelector('.car-products-fixed');
+const carProductsAside = document.querySelector('.car-menu');
+
+carProductsFixed.addEventListener('click', toggleOpenMenuCar);
+
+function toggleOpenMenuCar(){
+    carProductsAside.classList.toggle('inactive');
+    categoryBurgerMenu.classList.add('inactive');
+};
+// MENU DE LA HAMBURGUESA FIJA
+const burgerFixedIcon = document.querySelector('.menu-burger');
+const categoryBurgerMenu = document.querySelector('.menu-burger-category');
+
+burgerFixedIcon.addEventListener('click', toggleOpenMenuBurger);
+
+function toggleOpenMenuBurger(){
+    categoryBurgerMenu.classList.toggle('inactive');
+    carProductsAside.classList.add('inactive');  
+};
+
+
+
 btn.addEventListener('dblclick', clicOnBtn);
 
 function clicOnBtn(){
@@ -21,8 +45,8 @@ const form = document.querySelector('#form')
 
 form.addEventListener('dblclick', resultadu);
 
-function resultadu(e) {
-    e.preventDefault({event});
+function resultadu(event) {
+    event.preventDefault({event});
     const resultado = inputEnt1.value + inputEnt2.value;
     presultado2.innerText = 'El resultado es :' + resultado;
 
