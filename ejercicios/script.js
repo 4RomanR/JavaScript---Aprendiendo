@@ -91,34 +91,34 @@ for (product of productList) {
     productCard.classList.add('product-cards');
 
     const imgProduct = document.createElement('img');
+    imgProduct.classList.add('product-card-img');
     imgProduct.setAttribute('src', product.img);
 
-    const productInfo = document.createElement('div');
-    productInfoDiv.classList.add('product-details');
 
-    const productInfoDiv = document.createElement('div');
 
+    const productDetails = document.createElement('div');
+    productDetails.classList.add('product-details');
+
+        const productInfoDiv = document.createElement('div');
+
+            const productName = document.createElement('p');
+            productName.innerText = product.name;
+            const productPrice = document.createElement('p');
+            productPrice.innerText = product.price;
     
-    const productName = document.createElement('p')
-    productName.innerText = product.name;
-    const productPrice = document.createElement('p')
-    productPrice.innerText = product.price;
-    
-    productName.appendChild(productInfo);
-    productPrice.appendChild(productInfo);
+            productInfoDiv.appendChild(productName);
+            productInfoDiv.appendChild(productPrice);
 
+            const productFigure = document.createElement('figure');
+            const productImgCart = document.createElement('img');
 
-    const productFigure = document.createElement('figure');
-    const productImgCart = documen.createElement('img')
-    productImgCart.setAttribute('src', 'https://cdn-icons-png.flaticon.com/512/6132/6132882.png');
-
-    productImgCart.appendChild(productFigure);
-    
-    productInfo.appendChild(productInfoDiv);
-    productInfo.appendChild(productFigure);
-
-    productCard.appendChild(productImgCart);
-    productCard.appendChild(productInfo);
+            productImgCart.setAttribute('src', 'https://cdn-icons-png.flaticon.com/512/6132/6132882.png');
+            productFigure.appendChild(productImgCart);
+            
+        productDetails.appendChild(productInfoDiv);
+        productDetails.appendChild(productFigure);
+        productCard.appendChild(imgProduct);
+        productCard.appendChild(productDetails);
 
     cardContainer.appendChild(productCard);
 };
