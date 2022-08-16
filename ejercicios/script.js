@@ -86,39 +86,54 @@ productList.push({
 });
 
 
-for (product of productList) {
-    const productCard = document.createElement('div');
-    productCard.classList.add('product-cards');
-
-    const imgProduct = document.createElement('img');
-    imgProduct.classList.add('product-card-img');
-    imgProduct.setAttribute('src', product.img);
-
-
-
-    const productDetails = document.createElement('div');
-    productDetails.classList.add('product-details');
-
-        const productInfoDiv = document.createElement('div');
-
-            const productName = document.createElement('p');
-            productName.innerText = product.name;
-            const productPrice = document.createElement('p');
-            productPrice.innerText = product.price;
+function renderProducts (arr) {
+    for (product of arr) {
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-cards');
     
-            productInfoDiv.appendChild(productName);
-            productInfoDiv.appendChild(productPrice);
-
-            const productFigure = document.createElement('figure');
-            const productImgCart = document.createElement('img');
-
-            productImgCart.setAttribute('src', 'https://cdn-icons-png.flaticon.com/512/6132/6132882.png');
-            productFigure.appendChild(productImgCart);
-            
-        productDetails.appendChild(productInfoDiv);
-        productDetails.appendChild(productFigure);
-        productCard.appendChild(imgProduct);
-        productCard.appendChild(productDetails);
-
-    cardContainer.appendChild(productCard);
+        const imgProduct = document.createElement('img');
+        imgProduct.classList.add('product-card-img');
+        imgProduct.setAttribute('src', product.img);
+        imgProduct.addEventListener('click', openProductCardsDetails);
+    
+        const productDetails = document.createElement('div');
+        productDetails.classList.add('product-details');
+    
+            const productInfoDiv = document.createElement('div');
+    
+                const productName = document.createElement('p');
+                productName.innerText = product.name;
+                const productPrice = document.createElement('p');
+                productPrice.innerText = product.price;
+        
+                productInfoDiv.appendChild(productName);
+                productInfoDiv.appendChild(productPrice);
+    
+                const productFigure = document.createElement('figure');
+                const productImgCart = document.createElement('img');
+    
+                productImgCart.setAttribute('src', 'https://cdn-icons-png.flaticon.com/512/6132/6132882.png');
+                productFigure.appendChild(productImgCart);
+                
+            productDetails.appendChild(productInfoDiv);
+            productDetails.appendChild(productFigure);
+            productCard.appendChild(imgProduct);
+            productCard.appendChild(productDetails);
+    
+        cardContainer.appendChild(productCard);
+    };
 };
+renderProducts(productList);
+
+const ProductCardsDetails = document.querySelector('.product-cards-details');
+const closeProductCardsDetails = document.querySelector('.product-cards-details-close');
+
+function openProductCardsDetails(){
+    ProductCardsDetails.classList.remove('inactive');
+    categoryBurgerMenu.classList.add('inactive');
+    carProductsAside.classList.add('inactive'); 
+}
+closeProductCardsDetails.addEventListener('click', closeProductCDetails)
+function closeProductCDetails(){
+    ProductCardsDetails.classList.add('inactive');
+}
