@@ -56,3 +56,58 @@ aquí otra vaina
         const {fruits, vence} = user;
         console.log(user);
         console.log(vence, fruits);
+
+//Sprees Operator
+
+        const person = {name: 'oscar', edad: 30};
+        const country = 'mx';
+
+        const data = {...person, country};
+        console.log(data);
+
+//Rest
+        function (num, ...values){
+            console.log(values);
+            console.log(num + values[0]);
+            return num + values[0];
+        }
+        sum(1, 1, 2, 3);
+
+//Enhaced Object Literals
+function newUser (user, age, country, id){
+    return{
+        user, //si tengo varios elementos usar comas
+        age,
+        country,
+        id: uId
+    }
+}
+console.log(newUser("coco", 12, "awdf", 1));
+
+
+// Declaracion de CLASES - CLASS
+        class User{};
+// INSTANCIA de una CLASS
+        const newUser = new User();
+//----------------EJEMPLO-----------------------
+        class User {
+            //Metodo
+            greeting(){
+                return "hello";
+            }
+        };
+        const gndx = new User();
+        console.log(gndx.greeting());
+        const bebeloper = new User();
+        console.log(bebeloper.greeting());
+
+//Constructor
+        class User{
+            constructor (){
+                console.log('nuevo usuario');
+            }
+            greeting()          {
+                return "hello";
+            }
+        }
+        const david = new User();
